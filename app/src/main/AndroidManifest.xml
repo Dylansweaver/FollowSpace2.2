@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".Homepage"/>
         <activity android:name=".Nasa"/>
+        <activity android:name=".Elonmusk"/>
+        <activity android:name=".Esa"/>
     </application>
 
 </manifest>

@@ -6,43 +6,54 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
 
 /**
- * Created by dweaver on 11/14/17.
+ * Created by dweaver on 11/2/17.
  */
 
-public class Nasa extends ListActivity {
-
+public class Elonmusk extends ListActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nasa);
+        setContentView(R.layout.elonmusk);
         String username = getIntent().getStringExtra("username");
 
-        setContentView(R.layout.nasa);
+
+        setContentView(R.layout.elonmusk);
 
         final UserTimeline userTimeline = new UserTimeline.Builder()
-                .screenName("nasa")
+                .screenName("elonmusk")
                 .build();
         final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter.Builder(this)
                 .setTimeline(userTimeline)
                 .build();
         setListAdapter(adapter);
+
+
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Elonmusk.this, Nasa.class));
+            }
+        });
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Nasa.this, Homepage.class));
+                startActivity(new Intent(Elonmusk.this, Homepage.class));
+            }
+        });
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Elonmusk.this, Elonmusk.class));
             }
         });
 
-
-
     }
 }
-
-
