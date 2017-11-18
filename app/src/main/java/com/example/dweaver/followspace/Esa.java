@@ -32,7 +32,6 @@ public class Esa extends ListActivity {
                 .build();
         setListAdapter(adapter);
 
-
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,5 +60,7 @@ public class Esa extends ListActivity {
                 startActivity(new Intent(Esa.this, Esa.class));
             }
         });
+
+
     }
 }

@@ -42,11 +42,25 @@ public class Homepage extends ListActivity {
                 startActivity(new Intent(Homepage.this, Nasa.class));
             }
         });
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this, Homepage.class));
+            }
+        });
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Homepage.this, Elonmusk.class));
+            }
+        });
+        Button button4 = (Button) findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Homepage.this, Esa.class));
             }
         });
     }
