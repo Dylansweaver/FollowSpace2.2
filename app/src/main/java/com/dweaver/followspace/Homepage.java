@@ -1,4 +1,4 @@
-package com.example.dweaver.followspace;
+package com.dweaver.followspace;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -14,18 +14,18 @@ import com.twitter.sdk.android.tweetui.UserTimeline;
  * Created by dweaver on 11/2/17.
  */
 
-public class Elonmusk extends ListActivity {
+public class Homepage extends ListActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.elonmusk);
+        setContentView(R.layout.homepage);
         String username = getIntent().getStringExtra("username");
 
 
-        setContentView(R.layout.elonmusk);
+        setContentView(R.layout.homepage);
 
         final UserTimeline userTimeline = new UserTimeline.Builder()
-                .screenName("elonmusk")
+                .screenName("spaceX")
                 .build();
         final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter.Builder(this)
                 .setTimeline(userTimeline)
@@ -37,28 +37,28 @@ public class Elonmusk extends ListActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Elonmusk.this, Nasa.class));
+                startActivity(new Intent(Homepage.this, Nasa.class));
             }
         });
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Elonmusk.this, Homepage.class));
+                startActivity(new Intent(Homepage.this, Homepage.class));
             }
         });
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Elonmusk.this, Elonmusk.class));
+                startActivity(new Intent(Homepage.this, Elonmusk.class));
             }
         });
         Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Elonmusk.this, Esa.class));
+                startActivity(new Intent(Homepage.this, Esa.class));
             }
         });
     }

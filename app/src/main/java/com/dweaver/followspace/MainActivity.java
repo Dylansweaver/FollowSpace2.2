@@ -1,4 +1,4 @@
-package com.example.dweaver.followspace;
+package com.dweaver.followspace;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

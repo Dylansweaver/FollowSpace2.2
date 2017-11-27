@@ -1,4 +1,4 @@
-package com.example.dweaver.followspace;
+package com.dweaver.followspace;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
