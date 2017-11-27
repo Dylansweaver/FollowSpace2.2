@@ -3,6 +3,8 @@ package com.dweaver.followspace;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.twitter.sdk.android.core.Callback;
@@ -44,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Authentication Failed", Toast.LENGTH_LONG).show();
             }
         });
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Homepage.class));
+            }
+        });
     }
 
     public void login(TwitterSession session){
@@ -60,4 +69,5 @@ startActivity(intent);
         // Pass the activity result to the login button.
         loginButton.onActivityResult(requestCode, resultCode, data);
     }
+
 }
